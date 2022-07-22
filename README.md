@@ -25,12 +25,13 @@ There are three main categories of design patterns:
 
 * The main advantage of using this pattern is the reuse of common codes between classes, thus avoiding code duplications.
 * In [this example](./03-template-method/), an algorithm "template", which was being replicated in more than one class, was created and the concept of **inheritance** was used to reuse this code.
-* Thus, the **Template Method** pattern was applied by creating a concrete method in the “parent” class, which in turn calls the abstract methods in the “children” classes.
+* Thus, the **Template Method** pattern was applied by creating a concrete method in the “parent” class, which in turn calls the abstract methods in the “child” classes.
 * It can also be seen that it is possible to apply more than one pattern in the same code, considering that the **Chain of Responsibility** pattern was used in this same example.
 
 ## State
-
-
+* The **State** pattern solves a problem very similar to a problem solved by another pattern, the **Strategy**.
+* For the case where it is possible for an object to behave in different ways, depending on its state and the transition rules of this state, this pattern can be applied.
+* It is shown in [an example](./04-state/) that an abstract class can be implemented so that it represents the initial state of an object and then its child classes will represent the behavior for each type of state.
 
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
