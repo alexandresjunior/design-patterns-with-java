@@ -2,17 +2,21 @@ package com.design.patterns.store.budget;
 
 import java.math.BigDecimal;
 
+import com.design.patterns.store.exception.BudgetStatusException;
+import com.design.patterns.store.status.BudgetStatus;
+import com.design.patterns.store.status.InAnalysisStatus;
+
 public class Budget {
     
     private BigDecimal value;
     private int numberOfItems;
-    private String status;
+    private BudgetStatus status;
 
-    public String getStatus() {
+    public BudgetStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(BudgetStatus status) {
         this.status = status;
     }
 
@@ -23,6 +27,7 @@ public class Budget {
     public Budget(BigDecimal value, int numberOfItems) {
         this.value = value;
         this.numberOfItems = numberOfItems;
+        this.status = new InAnalysisStatus();
     }
 
     public BigDecimal getValue() {
@@ -42,26 +47,23 @@ public class Budget {
     }
 
     public void applyExtraDiscount() {
-        BigDecimal extraDiscountValue = BigDecimal.ZERO;
-
-        if (status.equals("IN ANALYSIS")) {
-            extraDiscountValue = this.value.multiply(new BigDecimal("0.05"));
-        } else if (status.equals("APPROVED")) {
-            extraDiscountValue = this.value.multiply(new BigDecimal("0.02"));
-        }
-
-        // Other conditions based on budget status
+        BigDecimal extraDiscountValue = this.status.calculateExtraDiscountValue(this);
 
         this.value = this.value.subtract(extraDiscountValue);
     }
 
-    public void approve() {
-        this.status = "APPROVED";
+    public void approve() throws BudgetStatusException {
+        this.status.approve(this);
     }
 
-    /**
-     * Other state transition methods and rules.
-     * Ex. State transition flow: IN ANALYSIS -> APPROVED/REPROVED -> FINISHED
-     */
+    public void reprove() throws BudgetStatusException {
+        this.status.reprove(this);
+    }
+
+    public void finish() throws BudgetStatusException {
+        this.status.finish(this);
+    }
+
+    
 
 }
