@@ -2,7 +2,7 @@
 
 ## Concept
 * Design patterns are generic solutions to recurring problems in object-oriented software development.
-* All design patterns defined by the [Gang of Four (GoF)](https://www.amazon.com.br/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) have a motivation: to solve a recurring problem.
+* All design patterns defined by the [Gang of Four (GoF)](./Design_Patterns_Elements_of_Reusable_Object_Oriented_Software.pdf) have a motivation: to solve a recurring problem.
 
 ## Categories
 There are three main categories of design patterns:
@@ -35,4 +35,5 @@ There are three main categories of design patterns:
 
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
+* Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
 * Link to Object-Oriented Programming repo (TBD).
