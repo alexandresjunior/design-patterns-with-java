@@ -39,6 +39,12 @@ There are three main categories of design patterns:
 * The **Command** design pattern is probably one of the most confusing, especially in the web development world in general, since some more specific concepts for the web world have emerged and are different from those existing in desktop applications.
 * It is also very interesting to study some software architecture patterns, such as **Domain Driven Design** and **Clean Architecture**, because it is commom to come across the **Command Handlers** pattern (which was applied very simple [in this example](./05-command/store_command/)).
 
+## Observer
+* A **Command Handler** is normally responsible for just orchestrating the tasks to be performed, that is, calling the necessary classes that perform the desired tasks. In [this example](./06-observer/store/), the Command Handler had all the code for the stream in its body.
+* If at some point one of the tasks stops working, it is known that there is a specific class for this purpose and so one can start debugging through it.
+* Also, in case the tool used to send emails changes after a few years, for example, the Command Handler will not need to know this specific detail. Therefore, it is interesting that each class is responsible for only one small task (**encapsulation**).
+* The **Observer** pattern, in turn, is commonly used by several libraries that work with **events**. Many Java technologies, such as Spring and CDI, have components that help work with events.
+* In short, leaving the implementation of all tasks of an application use case in the same class can cause problems, such as: maintenance difficulties, very large and unreadable classes, and problems when one need to change the implementation of one of the tasks. Therefore, it is more interesting to separate each action in a separate class and link an event that occurred with its actions, through the **Observer** pattern, as exemplified [here](./06-observer/store_observer/).
 
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
