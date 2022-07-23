@@ -33,6 +33,13 @@ There are three main categories of design patterns:
 * For the case where it is possible for an object to behave in different ways, depending on its state and the transition rules of this state, this pattern can be applied.
 * It is shown in [an example](./04-state/) that an abstract class can be implemented so that it represents the initial state of an object and then its child classes will represent the behavior for each type of state.
 
+## Command
+* In many projects, it is common to receive data and execute all tasks in the same class, as is the case presented in [order creation](./05-command/store/), for example.
+* However, if we needed, in addition to executing the order generation through the `CLI`, also executing it through a web form, an API and/or messages from a queue, we would need to duplicate all this code in several places.
+* The **Command** design pattern is probably one of the most confusing, especially in the web development world in general, since some more specific concepts for the web world have emerged and are different from those existing in desktop applications.
+* It is also very interesting to study some software architecture patterns, such as **Domain Driven Design** and **Clean Architecture**, because it is commom to come across the **Command Handlers** pattern (which was applied very simple [in this example](./05-command/store_command/)).
+
+
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
