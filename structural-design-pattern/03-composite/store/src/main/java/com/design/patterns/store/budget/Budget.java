@@ -25,10 +25,6 @@ public class Budget {
 
     public Budget(BigDecimal value) {
         this.value = value;
-    }
-
-    public Budget(BigDecimal value, int numberOfItems) {
-        this.value = value;
         this.items = new ArrayList<>();
         this.status = new InAnalysisStatus();
     }
@@ -68,6 +64,7 @@ public class Budget {
     }
 
     public void addItem(Item item) {
+        this.value = this.value.add(item.getValue());
         this.items.add(item);
     }
 
