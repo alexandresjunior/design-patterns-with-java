@@ -79,4 +79,4 @@ There are three main categories of design patterns:
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
-* Link to Object-Oriented Programming repo (TBD).
+* [Object-Oriented Programming with Java Language](https://github.com/alexandresjunior/object-orientation-with-java).
