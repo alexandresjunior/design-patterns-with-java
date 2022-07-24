@@ -60,6 +60,11 @@ There are three main categories of design patterns:
 * The **Decorator** pattern allows us to add new behaviors to an object, making the code very flexible and dynamic.
 * In [this example](./structural-design-pattern/02-decorator/), we can notice that it is possible to add behavior to classes at runtime, applying this knowledge to combine taxes, for instance.
 
+### Composite
+* In [this example](./structural-design-pattern/03-composite/store/), we needed to implement a way to add a budget to another budget, and so we chose the approach of being able to represent both budgets and items in a similar way, through the `Evaluable` interface.
+* Hence, by implementing an interface that allows us to represent `Item`s and `Budget`s in a similar way, we can go through this list of `Evaluable`s easily, to calculate the budget amount, which is the root of the tree.
+* It is quite common for us to need to work with collections of items that can have more than one implementation. If this structure can be described as a tree (in the computational model), then the **Composite** pattern can be very useful.
+
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
