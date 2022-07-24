@@ -4,8 +4,10 @@ import com.design.patterns.store.budget.Budget;
 
 public class BudgetRegistration {
     
-    public void register(Budget budget) {
+    public static void register(Budget budget) {
         // HTTP call to external API: URLConnection, HttpClient, REST libraries etc.
+
+        System.out.println("Order successfully registered!");
     }
 
 }
