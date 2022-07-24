@@ -54,6 +54,7 @@ There are three main categories of design patterns:
 * When we need to use legacy code or code from external components in our system, it is very common not to have the interface (public methods) matching what we need, so in these cases we create **adapters**.
 * It is already known that classes can have dependencies to perform their tasks, and in [this example](./structural-design-pattern/01-adapter/store/), the `BudgetRegistration` class has a dependency on which it can make HTTP calls.
 * A simple recommendation for working with dependencies, based on one of the **SOLID** principle (*Dependency Inversion Principle*, the letter **D**), is that we should always prefer to rely on **abstractions**, that is, **interfaces** or **abstract classes**, whenever possible, rather than specific implementations, like the one proposed [here](./structural-design-pattern/01-adapter/store_adapter/).
+* In summary, structural patterns such as the **Adapter** pattern help us to relate different classes in an organized way, in which infrastructure details must be abstracted through interfaces.
 
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
