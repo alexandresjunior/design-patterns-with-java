@@ -71,6 +71,11 @@ There are three main categories of design patterns:
 * The [Observer example](./behavioral-design-pattern/06-observer/) can also be used as a [Facade pattern application example](./structural-design-pattern/04-facade/), in which we saw that it is possible to provide access to a small part of a system, through a single class, and that this class can end up using several other classes of this "sub-system".
 * This gives us the advantage of simplicity, since having access to part of a system (module) through a single class, we have a simpler **interface**, with all the necessary infrastructure to perform the task.
 
+### Proxy
+* For multiple calls to a same external service, it may be useful to **cache** the information retrieved to improve performance from client-side, as described in [this example](./structural-design-pattern/05-proxy/).
+* The use of **Proxy** pattern, besides the perfomance improvement, may be used to intercept classes and enforce security rules.
+
+
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
