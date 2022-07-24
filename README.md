@@ -56,6 +56,10 @@ There are three main categories of design patterns:
 * A simple recommendation for working with dependencies, based on one of the **SOLID** principle (*Dependency Inversion Principle*, the letter **D**), is that we should always prefer to rely on **abstractions**, that is, **interfaces** or **abstract classes**, whenever possible, rather than specific implementations, like the one proposed [here](./structural-design-pattern/01-adapter/store_adapter/).
 * In summary, structural patterns such as the **Adapter** pattern help us to relate different classes in an organized way, in which infrastructure details must be abstracted through interfaces.
 
+### Decorator
+* The **Decorator** pattern allows us to add new behaviors to an object, making the code very flexible and dynamic.
+* In [this example](./structural-design-pattern/02-decorator/), we can notice that it is possible to add behavior to classes at runtime, applying this knowledge to combine taxes, for instance.
+
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
