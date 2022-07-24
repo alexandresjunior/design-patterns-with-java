@@ -65,6 +65,12 @@ There are three main categories of design patterns:
 * Hence, by implementing an interface that allows us to represent `Item`s and `Budget`s in a similar way, we can go through this list of `Evaluable`s easily, to calculate the budget amount, which is the root of the tree.
 * It is quite common for us to need to work with collections of items that can have more than one implementation. If this structure can be described as a tree (in the computational model), then the **Composite** pattern can be very useful.
 
+### Facade
+* In certain cases, we may need simplified access to a complex or large part of our system, such as authentication, file system access, cache, etc. 
+* A **Facade** class, containing only the desired functionality, can be quite useful for those cases.
+* The [Observer example](./behavioral-design-pattern/06-observer/) can also be used as a [Facade pattern application example](./structural-design-pattern/04-facade/), in which we saw that it is possible to provide access to a small part of a system, through a single class, and that this class can end up using several other classes of this "sub-system".
+* This gives us the advantage of simplicity, since having access to part of a system (module) through a single class, we have a simpler **interface**, with all the necessary infrastructure to perform the task.
+
 ## Additional Links
 * [Refactoring Guru](https://refactoring.guru/pt-br/design-patterns/java)
 * Book [Design Patterns](./Design_Patterns_com_Java_Projeto_Orientado_a_Objetos_Guiado_por_Padroes.pdf) in Portuguese (Casa do Código)
